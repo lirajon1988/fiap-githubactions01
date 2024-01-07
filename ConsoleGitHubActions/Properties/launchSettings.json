@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ConsoleGitHubActions": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
