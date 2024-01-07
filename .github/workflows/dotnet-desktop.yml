@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -38,4 +38,16 @@ jobs:
           username: 'lirajon1988'
           # Password or personal access token used to log against the Docker registry
           password: ${{ secrets.ACTIONS_PASSWORD }}
-         
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v5.1.0
+        with:
+          context: .
+          tags: 'latest'
+          push: true
+          
+          
+          
+      
+                
+               
